@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login form</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+  <h2>Loan Application Form</h2>
+  <form id="loanForm">
+      <div>
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" required>
+      </div>
+      <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+      </div>
+      <div>
+          <label for="amountInput">Loan Amount:</label>
+          <input type="number" id="amountInput" required>
+      </div>
+      <div>
+          <label for="panInput">PAN Number:</label>
+          <input type="text" id="panInput" pattern="[A-Z]{5}[0-9]{4}[A-Z]" required>
+      </div>
+      <div id="captchaContainer">
+          <input type="text" id="captchaText" placeholder="Enter CAPTCHA" required>
+          <span id="refreshIcon" onclick="refreshCaptcha">&#8635;</span>
+      </div>
+      <button type="button" onclick="submitForm()">Submit</button>
+      <div id="result"></div>
+  </form>
+</div>
+
+  <script src="index.js"></script>
+</body>
+</html>
